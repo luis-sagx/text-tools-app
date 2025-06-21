@@ -1,0 +1,14 @@
+<h2 class="text-2xl font-bold mb-4 text-blue-700">Convertidor de Mayúsculas y Minúsculas</h2>
+
+<textarea [(ngModel)]="inputText"
+          rows="5"
+          class="w-full p-3 border rounded mb-4"
+          placeholder="Escribe texto aquí..."></textarea>
+
+<div class="space-x-4 mb-4">
+  <button (click)="toUpper()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Mayúsculas</button>
+  <button (click)="toLower()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Minúsculas</button>
+</div>
+
+<h3 class="font-semibold text-gray-700">Resultado:</h3>
+<p class="p-2 bg-gray-100 border rounded">{{ outputText }}</p>
