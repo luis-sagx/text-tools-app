@@ -18,4 +18,10 @@ export class TextCaseTool {
   toLower() {
     this.outputText = this.inputText.toLowerCase();
   }
+
+  toCapital(){
+    this.outputText = this.inputText
+      .toLowerCase()
+      .replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
+  }
 }
