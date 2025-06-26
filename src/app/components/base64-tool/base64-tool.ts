@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './base64-tool.css'
 })
 export class Base64Tool {
-
+  
 }

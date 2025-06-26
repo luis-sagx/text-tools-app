@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TextCaseTool } from './components/text-case-tool/text-case-tool';
+import { Nav } from "./components/nav/nav";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TextCaseTool],
+  imports: [RouterOutlet, Nav],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

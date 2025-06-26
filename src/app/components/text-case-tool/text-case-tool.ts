@@ -12,16 +12,32 @@ export class TextCaseTool {
   outputText = '';
 
   toUpper() {
-    this.outputText = this.inputText.toUpperCase();
+    if(this.verifyInput()){
+      this.outputText = this.inputText.toUpperCase();
+    }
   }
 
   toLower() {
-    this.outputText = this.inputText.toLowerCase();
+    if(this.verifyInput()){
+      this.outputText = this.inputText.toLowerCase();
+    }
   }
 
   toCapital(){
-    this.outputText = this.inputText
+    if(this.verifyInput()){
+      this.outputText = this.inputText
       .toLowerCase()
       .replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
+    }
+  }
+
+  verifyInput() : boolean {
+    if(/[a-zA-Z]/.test(this.inputText)) {
+      return true;
+    }
+    else {
+      this.outputText = 'Please enter valid text.';
+      return false;
+    }
   }
 }
