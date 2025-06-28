@@ -40,4 +40,9 @@ export class TextCaseTool {
       return false;
     }
   }
+
+  clear() {
+    this.inputText = '';
+    this.outputText = '';
+  }
 }

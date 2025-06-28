@@ -1,32 +1,39 @@
-<div class="max-w-[50%] mx-auto mt-4">
-  <div class="pt-20 px-4">
+<div class="max-w-4xl mx-auto px-4">
   <h2 class="text-2xl font-semibold mb-6 text-slate-800">Convertidor de Mayúsculas y Minúsculas</h2>
 
   <textarea [(ngModel)]="inputText"
             rows="5"
-            class="w-full p-4 bg-white border border-slate-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-6"
+            class="resize-none w-full h-52 p-4 bg-white border border-slate-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-6"
             placeholder="Escribe texto aquí..."></textarea>
 
   <div class="flex flex-wrap gap-4 mb-6">
-    <button (click)="toUpper()"
-            class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
-      Mayúsculas
-    </button>
+    <div class="flex gap-4">
+      <button (click)="toUpper()"
+          class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
+        Mayúsculas
+      </button>
 
-    <button (click)="toLower()"
-            class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
-      Minúsculas
-    </button>
+      <button (click)="toLower()"
+          class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
+        Minúsculas
+      </button>
 
-    <button (click)="toCapital()"
-            class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
-      Capitalizar
+      <button (click)="toCapital()" 
+          class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
+        Capitalizar
+      </button>
+    </div>
+    <div class="flex gap-4 ml-auto">
+      <button (click)="clear()" 
+      class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
+      <i class="fas fa-eraser text-white"></i>
+      Limpiar Texto
     </button>
+    </div>
   </div>
 
   <h3 class="font-semibold text-slate-700 mb-2">Resultado:</h3>
-  <p class="p-4 bg-slate-100 border border-slate-300 rounded-xl shadow-inner whitespace-pre-line">
+  <p class="p-4 h-32 bg-slate-100 border border-slate-300 rounded-xl shadow-inner whitespace-pre-line">
     {{ outputText }}
   </p>
-</div>
 </div>
