@@ -1,1 +1,32 @@
-<p>base64-tool works!</p>
+<div class="max-w-4xl mx-auto px-4">
+  <h2 class="text-2xl font-semibold mb-6 text-slate-800">Convertidor de Base 64</h2>
+
+  <textarea [(ngModel)]="inputText"
+            rows="5"
+            class="resize-none w-full h-52 p-4 bg-white border border-slate-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-6"
+            placeholder="Escribe texto aquí..."></textarea>
+
+    <div class="w-full flex flex-wrap gap-4 mb-6">
+      <div class="flex gap-4 flex-wrap">
+        <button (click)="convertToBase64()"
+                class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
+          Texto → Base64
+        </button>
+
+        <button (click)="convertToText()"
+                class="bg-indigo-600 text-white px-5 py-2 rounded-xl shadow-md hover:bg-indigo-700 transition">
+          Base64 → Texto
+        </button>
+        <button (click)="clear()"
+            class="bg-slate-500 text-white px-5 py-2 rounded-xl shadow-md hover:bg-slate-600 transition">
+            Limpiar
+        </button>
+      </div>
+  </div>
+
+
+  <h3 class="font-semibold text-slate-700 mb-2">Resultado:</h3>
+  <p class="p-4 h-32 bg-slate-100 border border-slate-300 rounded-xl shadow-inner whitespace-pre-line">
+    {{ result }}
+  </p>
+</div>
