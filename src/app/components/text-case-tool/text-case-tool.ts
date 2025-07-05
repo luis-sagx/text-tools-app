@@ -4,6 +4,7 @@ import { CopyButton } from '../ui/copy-button/copy-button';
 
 @Component({
   selector: 'app-text-case-tool',
+  standalone: true,
   imports: [FormsModule, CopyButton],
   templateUrl: './text-case-tool.html',
   styleUrl: './text-case-tool.css'
@@ -11,33 +12,35 @@ import { CopyButton } from '../ui/copy-button/copy-button';
 export class TextCaseTool {
   inputText = '';
   outputText = '';
+  hasError = false;
 
   toUpper() {
-    if(this.verifyInput()){
+    if (this.verifyInput()) {
       this.outputText = this.inputText.toUpperCase();
     }
   }
 
   toLower() {
-    if(this.verifyInput()){
+    if (this.verifyInput()) {
       this.outputText = this.inputText.toLowerCase();
     }
   }
 
-  toCapital(){
-    if(this.verifyInput()){
+  toCapital() {
+    if (this.verifyInput()) {
       this.outputText = this.inputText
-      .toLowerCase()
-      .replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
+        .toLowerCase()
+        .replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
     }
   }
 
-  verifyInput() : boolean {
-    if(/[a-zA-Z]/.test(this.inputText)) {
+  verifyInput(): boolean {
+    if (/[a-zA-Z]/.test(this.inputText)) {
+      this.hasError = false;
       return true;
-    }
-    else {
-      this.outputText = 'Please enter valid text.';
+    } else {
+      this.hasError = true;
+      this.outputText = '';
       return false;
     }
   }
@@ -45,5 +48,6 @@ export class TextCaseTool {
   clear() {
     this.inputText = '';
     this.outputText = '';
+    this.hasError = false;
   }
 }
