@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CopyButton } from '../ui/copy-button/copy-button';
 
 @Component({
   selector: 'base64-tool',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CopyButton],
   templateUrl: './base64-tool.html',
   styleUrl: './base64-tool.css'
 })

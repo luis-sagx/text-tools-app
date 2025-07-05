@@ -1,27 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Input } from '@angular/core';
 
 
 @Component({
   selector: 'app-word-count',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './word-count.html',
   styleUrl: './word-count.css'
 })
 export class WordCount {
-  inputText: string = '';
-  wordCount: number = 0;
-  charCount: number = 0;
+  inputText = signal(''); 
 
-  countWords() {
-    this.wordCount = this.inputText ? this.inputText.trim().split(/\s+/).length : 0;
-    this.charCount = this.inputText.length;
-  }
+  wordCount = computed(() =>
+    this.inputText().trim() ? this.inputText().trim().split(/\s+/).length : 0
+  );
+
+  charCount = computed(() => this.inputText().length);
 
   clear() {
-    this.inputText = '';
-    this.wordCount = 0;
-    this.charCount = 0;
+    this.inputText.set('');
   }
 }
