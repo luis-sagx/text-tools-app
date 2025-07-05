@@ -1,4 +1,4 @@
-<div class="max-w-4xl mx-auto px-4">
+<div class="w-full mx-auto px-4 mt-10">
   <h2 class="text-2xl font-semibold mb-6 text-slate-800">Convertidor de Mayúsculas y Minúsculas</h2>
 
   <textarea [(ngModel)]="inputText"
@@ -31,8 +31,17 @@
     </div>
   </div>
 
-  <h3 class="font-semibold text-slate-700 mb-2">Resultado:</h3>
-  <p class="p-4 h-32 bg-slate-100 border border-slate-300 rounded-xl shadow-inner whitespace-pre-line">
+<h3 class="font-semibold text-slate-700 mb-2 text-lg">Resultado:</h3>
+
+<div class="relative p-4 h-52 bg-slate-100 border border-slate-300 rounded-xl shadow-inner whitespace-pre-line">
+  <div class="absolute top-2 right-2">
+    <app-copy-button [textToCopy]="outputText" />
+  </div>
+
+  <h4 class="text-slate-700 font-semibold mb-2">Texto</h4>
+
+  <p class="text-slate-800 text-sm h-[calc(100%-2rem)] overflow-y-auto overflow-x-hidden break-words">
     {{ outputText }}
   </p>
 </div>
+

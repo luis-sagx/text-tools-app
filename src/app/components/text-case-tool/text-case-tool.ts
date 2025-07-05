@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CopyButton } from '../ui/copy-button/copy-button';
 
 @Component({
   selector: 'app-text-case-tool',
-  imports: [FormsModule],
+  imports: [FormsModule, CopyButton],
   templateUrl: './text-case-tool.html',
   styleUrl: './text-case-tool.css'
 })

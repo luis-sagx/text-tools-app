@@ -1,8 +1,10 @@
 <div class="min-h-screen flex flex-col">
   <app-nav></app-nav>
 
-  <main class="flex-grow">
-    <router-outlet />
+  <main class="flex-1 bg-stone-100 flex justify-center items-center">
+    <div class="w-1/2 px-4 py-6">
+      <router-outlet></router-outlet>
+    </div>
   </main>
 
   <app-footer></app-footer>
