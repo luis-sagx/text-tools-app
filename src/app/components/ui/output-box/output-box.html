@@ -1,0 +1,11 @@
+<div class="relative p-4 h-52 bg-slate-100 border border-slate-300 rounded-xl shadow-inner whitespace-pre-line">
+  <div class="absolute top-2 right-2">
+    <app-copy-button [textToCopy]="text" />
+  </div>
+
+  <h4 class="text-slate-700 font-semibold mb-2">Text</h4>
+
+  <p class="text-slate-800 text-sm h-[calc(100%-2rem)] overflow-y-auto overflow-x-hidden break-words">
+    {{ text }}
+  </p>
+</div>

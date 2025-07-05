@@ -1,12 +1,12 @@
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import * as CryptoJS from 'crypto-js';
-import { CopyButton } from '../ui/copy-button/copy-button';
+import { OutputBox } from '../ui/output-box/output-box';
 
 @Component({
   selector: 'app-hash-generator',
   standalone: true,
-  imports: [FormsModule, CopyButton],
+  imports: [FormsModule, OutputBox],
   templateUrl: './hash-generator.html',
   styleUrl: './hash-generator.css'
 })

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CopyButton } from '../ui/copy-button/copy-button';
+import { OutputBox } from '../ui/output-box/output-box';
 
 @Component({
   selector: 'app-text-json-converter',
   standalone: true,
-  imports: [FormsModule, CopyButton],
+  imports: [FormsModule, OutputBox],
   templateUrl: './text-json-converter.html',
   styleUrl: './text-json-converter.css'
 })
