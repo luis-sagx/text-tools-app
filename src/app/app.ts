@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Nav } from "./components/nav/nav";
-import { Footer } from "./components/footer/footer";
+import { Nav } from "./components/layout/nav/nav";
+import { Footer } from "./components/layout/footer/footer";
 
 @Component({
   selector: 'app-root',

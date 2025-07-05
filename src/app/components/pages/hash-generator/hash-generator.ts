@@ -1,7 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import * as CryptoJS from 'crypto-js';
-import { OutputBox } from '../ui/output-box/output-box';
+import { OutputBox } from '../../ui/output-box/output-box';
 
 @Component({
   selector: 'app-hash-generator',

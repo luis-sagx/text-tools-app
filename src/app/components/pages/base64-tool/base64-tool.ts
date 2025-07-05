@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { OutputBox } from '../ui/output-box/output-box';
+import { OutputBox } from '../../ui/output-box/output-box';
 
 @Component({
   selector: 'base64-tool',

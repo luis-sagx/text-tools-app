@@ -1,13 +1,17 @@
 import { Routes } from '@angular/router';
-//import { HomeComponent } from './home/home.component';
-import { TextCaseTool } from './components/text-case-tool/text-case-tool'; 
-import { Base64Tool } from './components/base64-tool/base64-tool';
-import { WordCount } from './components/word-count/word-count';
-import { HashGenerator } from './components/hash-generator/hash-generator';
-import { TextJsonConverter } from './components/text-json-converter/text-json-converter';
-import { ReversePalindromeTool } from './components/reverse-palindrome-tool/reverse-palindrome-tool';
+import { Home } from './components/pages/home/home';
+import { TextCaseTool } from './components/pages/text-case-tool/text-case-tool'; 
+import { Base64Tool } from './components/pages/base64-tool/base64-tool';
+import { WordCount } from './components/pages/word-count/word-count';
+import { HashGenerator } from './components/pages/hash-generator/hash-generator';
+import { TextJsonConverter } from './components/pages/text-json-converter/text-json-converter';
+import { ReversePalindromeTool } from './components/pages/reverse-palindrome-tool/reverse-palindrome-tool';
 
 export const routes: Routes = [
+    {
+        path: '',
+        component: Home,
+    },
     {
         path: 'text-case',
         component: TextCaseTool,
@@ -34,6 +38,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '/text-case',
+        redirectTo: '/',
     }
 ];
