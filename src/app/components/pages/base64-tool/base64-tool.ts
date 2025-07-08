@@ -12,25 +12,31 @@ import { OutputBox } from '../../ui/output-box/output-box';
 export class Base64Tool {
   inputText: string = '';
   result: string = '';
+  hasError: boolean = false;
 
   convertToBase64(): void {
+    this.hasError = false;
     try {
       this.result = btoa(this.inputText);
-    } catch (error) {
-      this.result = '⚠️ Error: El texto contiene caracteres no compatibles. Usa encodeURIComponent primero si es necesario.';
+    } catch {
+      this.hasError = true;
+      this.result = '';
     }
   }
 
   convertToText(): void {
+    this.hasError = false;
     try {
       this.result = atob(this.inputText);
-    } catch (error) {
-      this.result = '⚠️ Error: El contenido no es una cadena Base64 válida.';
+    } catch {
+      this.hasError = true;
+      this.result = '';
     }
   }
 
   clear(): void {
     this.inputText = '';
     this.result = '';
+    this.hasError = false;
   }
 }
