@@ -40,6 +40,34 @@ A modern text manipulation web app built with **Angular 20 + TailwindCSS**. Incl
 
 ---
 
+## 🧑‍💻 How to Contribute
+
+Contributions are welcome!  
+
+1. **Fork** this repository
+2. **Create a new branch** for your feature or fix:
+   ```bash
+   git checkout -b feature/new-tool
+   ```
+3. Make your changes and test locally with:
+   ```bash
+   ng serve
+   ```
+4. **Commit** your changes:
+   ```bash
+   git commit -m "Add word count tool"
+   ```
+5. **Push your branch** to your fork:
+   ```bash
+   git push origin feature/new-tool
+   ```
+6. **Open a Pull Request** from your fork 🧑‍💻
+
+
+See 👉 [CONTRIBUTING.md](CONTRIBUTING.md) for more guidelines.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -62,12 +90,6 @@ src/
 
 ![alt text](assets/home.png)
 
----
-
-## 🧑‍💻 How to Contribute
-
-Contributions are welcome!  
-See 👉 [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
