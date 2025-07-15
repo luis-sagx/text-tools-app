@@ -178,3 +178,13 @@
     margin-block: 1.5rem;
   }
 }
+/* src/app/app.css */
+main {
+  padding-top: 4rem; /* or whatever your navbar height is */
+}
+@media (max-width: 640px) {
+  main {
+    padding-top: 19.5rem; /* smaller padding for mobile if navbar is shorter */
+  }
+}
+ 
