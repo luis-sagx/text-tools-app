@@ -165,3 +165,16 @@
       margin-block: 1.5rem;
     }
   }
+
+
+@media screen and (max-width: 650px) {
+  .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .divider {
+    height: 1px;
+    width: 100%;
+    margin-block: 1.5rem;
+  }
+}
